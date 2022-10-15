@@ -57,7 +57,7 @@ console.log(array.length);
  // objects in js
  // its storage of data in key value pairs
 
- var obj={name:"Fahad", Age: 25, place: "Mysore"}
+ var obj={name:"Fahad", Age: 25, p: "Mysore"}
  
  // 2 types to access object 
  // 1. [] bracket notation
@@ -151,8 +151,117 @@ console.log(player[4]);
 
 for(var i=0;i<=player.length;i++)
 {
-    console.log(player[i].Country);
+    console.log(player[i].Team);
 }
+
+// arrow function
+const sum= (a,b) => a+b;
+console.log(sum(100,150));
+
+//forEach
+const cities=['mysore','bangalore','mumbai','chennai','delhi'];
+        cities.forEach((city)=>{console.log(city);}) // arrow function
+        cities.forEach(function(city){
+            console.log(city);
+        })
+
+    // array map
+  const num=[10,20,30,40,50];
+  const result=num.map(function(data){
+      return data+10;
+  })
+  console.log(num);
+  console.log(result);
+
+      // array filter 
+
+const num1 = [2, 4, 6, 8, 10, 12];
+const res = num1.filter(function(data) {
+  return data > 7;
+})
+console.log(num1);
+console.log(res);
+
+//reduce 
+let arr=[1,5,6,3,2,6,3,4];
+        const arr1=arr.reduce((a,b) =>{
+            return a+b;
+        })
+        console.log(arr);
+        console.log(arr1);
+
+// find
+ let arr2=[1,2,3,4,5,6,7,8,9];
+ let get=arr2.find((data)=>{
+     return data>5;
+ })
+ console.log(arr2);
+ console.log(get);  
+
+ // array destructing
+
+ let greet=['Welcome','home'];
+     const[a,b]=greet;
+    console.log(a);
+    console.log(b);
+
+// object destructing
+
+const person={
+    firstName: 'Mohammed',
+    lastName: 'Fahad',
+    Age: 25
+}
+const{firstName,lastName,Age}=person;
+        console.log(firstName,lastName,Age)
+
+ // string literals
+ 
+ 
+let firstN='Kane';
+let lastN=' Williamson';
+let text=`Century for ${firstN}${lastN}`;
+console.log(text);
+
+
+// this keyword 
+// within normal function it points to local variable
+// in arrow function or js code it points to global scope
+
+var name='david';
+        function whoisThis(){
+            var name='Beckham';
+            console.log(name);
+            console.log(this.name);
+        }
+        whoisThis();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
