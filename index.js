@@ -231,11 +231,29 @@ console.log(text);
 var name='david';
         function whoisThis(){
             var name='Beckham';
-            console.log(name);
             console.log(this.name);
         }
         whoisThis();
 
+        // method
+
+        let person1={
+            name1:'starc',
+            altName:function(){
+              console.log('hello');
+            console.log(this.name1);
+            }
+        }
+       console.log(person1.altName());
+
+//array concatination  and spread
+
+let array1=[10,20,30,40];
+let array2=[70,80,80,90];
+array1.concat(array2);
+console.log(array1.concat(array2)) // concat is for concatination
+let array3=[10,...array1,...array2]; // ...array1 is for spread
+console.log(array3);
 
 
 
