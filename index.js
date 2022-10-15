@@ -151,7 +151,7 @@ console.log(player[4]);
 
 for(var i=0;i<=player.length;i++)
 {
-    console.log(player[i].Team);
+    console.log(player[i].Country);
 }
 
 // arrow function
